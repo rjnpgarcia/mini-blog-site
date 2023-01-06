@@ -23,13 +23,13 @@ if (isset($_POST['submit'])) {
 <section>
     <div class="container">
         <form action="" method="POST" class="form">
-            <h3>Create a Post!</h3>
+            <h3 class="pt-3">Create a Post!</h3>
             <!-- Success Message Notification -->
             <?= $success ?? ''; ?>
             <div class="form-group">
-                <input type="text" name="title" placeholder="Enter Title" class="form-control">
-                <textarea name="content" rows="2" placeholder="Enter Content" class="form-control"></textarea>
-                <button name="submit" class="btn btn-success">POST</button>
+                <input type="text" name="title" placeholder="Enter Title" class="form-control form-input">
+                <textarea name="content" rows="2" placeholder="Enter Content" class="form-control form-input"></textarea>
+                <button name="submit" class="btn btn-success blog-btn">POST</button>
             </div>
         </form>
     </div>

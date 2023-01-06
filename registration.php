@@ -61,29 +61,33 @@ if (isset($_POST['register'])) {
 ?>
 
 <section>
-    <div class="container">
+    <div class="justify-content-center d-flex">
         <h1>Registration</h1>
-        <form action="" method="POST" class="form">
-            <h2>See the Registration Rules</h2>
-            <!-- Success Message Notification-->
-            <?= $success ?? ''; ?>
+    </div>
+    <div class="container justify-content-center d-flex">
+        <form action="" method="POST" class="form login-card">
+            <div class="border-bottom mb-3">
+                <p class="fs-4 p-3">See the Registration Rules</p>
+                <!-- Success Message Notification-->
+                <?= $success ?? ''; ?>
+            </div>
             <div class="form-group">
-                <input type="text" name="username" placeholder="Enter Username" class="form-control">
+                <input type="text" name="username" placeholder="Enter Username" class="form-control form-input">
                 <p class="text-danger"><?= isset($error['username']) ? $error['username'] : ''; ?></p>
             </div>
             <div class="form-group">
-                <input type="email" name="email" placeholder="Enter Email" class="form-control">
+                <input type="email" name="email" placeholder="Enter Email" class="form-control form-input">
                 <p class="text-danger"><?= isset($error['email']) ? $error['email'] : ''; ?></p>
             </div>
             <div class="form-group">
-                <input type="password" name="password" placeholder="Enter Password" class="form-control">
+                <input type="password" name="password" placeholder="Enter Password" class="form-control form-input">
                 <p class="text-danger"><?= isset($error['password']) ? $error['password'] : ''; ?></p>
             </div>
             <div class="form-group">
-                <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control">
+                <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control form-input">
             </div>
-            <button name="register" class="btn btn-success">Register</button>
-            <p>Return to the <a href="login.php">LOGIN PAGE</a></p>
+            <button name="register" class="btn btn-success blog-btn">Register</button>
+            <p class="ntf">Return to the <a href="login.php" class="text-decoration-none text-warning">LOGIN PAGE</a></p>
         </form>
     </div>
 </section>

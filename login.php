@@ -25,20 +25,23 @@ if (isset($_POST['login'])) {
 ?>
 
 <section>
-    <div class="container">
+    <div class="container login-card">
         <form action="" method="POST" class="form">
-            <div class="form-group">
-                <h1>Login</h1>
+            <div class="border-bottom mb-3">
+                <p class="fs-4">Login</p>
                 <!-- Error Message Notification -->
                 <?= $errorMessage ?? ''; ?>
             </div>
             <div class="form-group">
-                <input type="email" name="email" placeholder="Enter Email" class="form-control">
-                <input type="password" name="password" placeholder="Enter Password" class="form-control">
-                <button name="login" class="btn btn-success">LOGIN</button>
-                <a class="btn btn-success" href="registration.php">REGISTER</a>
+                <input type="email" name="email" placeholder="Enter Email" class="form-control form-input">
+                <input type="password" name="password" placeholder="Enter Password" class="form-control form-input">
+                <button name="login" class="blog-btn btn btn-success">LOGIN</button>
+                <a class="blog-btn btn btn-success" href="registration.php">REGISTER</a>
             </div>
         </form>
+        <?php if (!$login->isLoggedIn()) : ?>
+            <p class="fs-6 ntf">Currently logged out.</p>
+        <?php endif; ?>
     </div>
 </section>
 

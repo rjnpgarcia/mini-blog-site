@@ -1,7 +1,7 @@
 <body>
-    <nav class="navbar navbar-fixed-top bg-primary">
+    <nav class="navbar navbar-fixed-top p-0">
         <div class="container-fluid">
-            <a href="index.php" class="navbar-brand text-light">MiniBlog</a>
+            <a href="index.php" class="navbar-brand text-light fs-3 fw-bold">MiniBlog</a>
             <ul class="nav justify-content-end">
                 <!-- For Login and Logout Nav Links -->
                 <?php if ($login->isLoggedIn()) : ?>

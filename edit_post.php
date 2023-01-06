@@ -37,13 +37,13 @@ if (isset($_POST['submit'])) {
         <form action="" method="POST" class="form">
             <!-- Success Message Notification -->
             <?= $success ?? ''; ?>
-            <h3>Edit Post - <?= $post_title; ?></h3>
+            <h3 class="pt-3 pb-4">Edit Post - <?= $post_title; ?></h3>
             <div class="form-group">
-                <label for="title">Enter New Title</label>
-                <input type="text" name="title" value="<?= $post_title; ?>" class="form-control">
-                <label for="content">Enter New Content</label>
-                <textarea name="content" rows="2" class=" form-control"><?= $post_content; ?></textarea>
-                <button name="submit" class="btn btn-success">SAVE</button>
+                <label for="title" class="label-title">Enter New Title</label>
+                <input type="text" name="title" value="<?= $post_title; ?>" class="form-control form-input-edit">
+                <label for="content" class="label-content">Enter New Content</label>
+                <textarea name="content" rows="2" class=" form-control form-input-edit"><?= $post_content; ?></textarea>
+                <button name="submit" class="btn btn-success blog-btn">SAVE</button>
             </div>
         </form>
     </div>
