@@ -2,7 +2,8 @@
 
 class LoginController
 {
-    public function loginUser($email, $password)
+    // To Login User
+    public function loginUser($email, $password): void
     {
         global $connection;
 
@@ -26,6 +27,16 @@ class LoginController
                 header("Location: index.php");
                 exit;
             }
+        }
+    }
+
+    // To check if user is logged in
+    public function isLoggedIn(): bool
+    {
+        if (isset($_SESSION['user_id'])) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

@@ -55,7 +55,7 @@ if (isset($_POST['register'])) {
     }
     if (empty($error)) {
         $register->registerUser($username, $email, $password);
-        header("Location: login.php");
+        $success = "<p class='text-success'>Thank you for you registration! You can now login <a href='login.php'>HERE</a></p>";
     }
 }
 ?>
@@ -65,6 +65,8 @@ if (isset($_POST['register'])) {
         <h1>Registration</h1>
         <form action="" method="POST" class="form">
             <h2>See the Registration Rules</h2>
+            <!-- Success Message Notification-->
+            <?= $success ?? ''; ?>
             <div class="form-group">
                 <input type="text" name="username" placeholder="Enter Username" class="form-control">
                 <p class="text-danger"><?= isset($error['username']) ? $error['username'] : ''; ?></p>

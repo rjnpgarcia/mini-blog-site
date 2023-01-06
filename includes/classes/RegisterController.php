@@ -36,7 +36,8 @@ class RegisterController
         }
     }
 
-    public function registerUser($username, $email, $password)
+    //  Register New User
+    public function registerUser($username, $email, $password): void
     {
         global $connection;
         $username = mysqli_real_escape_string($connection, $username);

@@ -2,6 +2,11 @@
 require_once "layouts/header.php";
 require_once "layouts/nav.php";
 
+// Redirect to Index if user is logged in
+if ($login->isLoggedIn()) {
+    header("Location: index.php");
+}
+
 // LOGIN Username and Password Query
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
@@ -24,6 +29,7 @@ if (isset($_POST['login'])) {
         <form action="" method="POST" class="form">
             <div class="form-group">
                 <h1>Login</h1>
+                <!-- Error Message Notification -->
                 <?= $errorMessage ?? ''; ?>
             </div>
             <div class="form-group">

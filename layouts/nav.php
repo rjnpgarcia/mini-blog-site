@@ -1,11 +1,25 @@
 <body>
     <nav class="navbar navbar-fixed-top bg-primary">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand text-light">MiniBlog</a>
+            <a href="index.php" class="navbar-brand text-light">MiniBlog</a>
             <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="login.php">Login</a>
-                </li>
+                <!-- For Login and Logout Nav Links -->
+                <?php if ($login->isLoggedIn()) : ?>
+                    <li class="nav-item text-light">
+                        <a class="nav-link text-light" href="#">Hi <?= $_SESSION['username']; ?>!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="includes/logout.php">Logout</a>
+                    </li>
+                <?php else : ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="login.php">Login</a>
+                    </li>
+                <?php endif; ?>
+                <!-- ************************ -->
             </ul>
         </div>
     </nav>

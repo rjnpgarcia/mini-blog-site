@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+// Database and Controllers
 require "includes/database.php";
 require "includes/init.php";
 ?>
