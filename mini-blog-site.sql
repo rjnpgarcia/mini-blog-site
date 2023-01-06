@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2023 at 08:18 AM
+-- Generation Time: Jan 06, 2023 at 09:45 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,9 +39,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `post_title`, `post_content`, `post_date`) VALUES
-(2, 'Test Post', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '6th of January 2023 06:57:19 AM'),
-(3, '2nd Post', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium', '6th of January 2023 06:58:26 AM'),
-(4, '3rd Post', 'Aaawwweeesome', '6th of January 2023 06:59:01 AM');
+(2, 'First Post Blog', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '6th of January 2023 06:57:19 AM'),
+(3, 'Thankful Post', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium', '6th of January 2023 06:58:26 AM'),
+(4, 'PHP Language', 'Aaawwweeesome', '6th of January 2023 06:59:01 AM');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
